@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Carteira Digital</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-        <class="container">
-    <main>
-        <div class="container-center">                
+    <link rel="icon" type="image/x-icon" href="/img/3.png"/>
+</head>
+<body>
+    <section class= "container">
+        <main>
+        <section class="container-center">                
                 <h2>Cadastre seu cartão de crédito</h2><br>
                 <p>Insira os dados do cartão para que a validação seja feita:</p><br>
-        </div>
+                    <div class="register">Situação de cadastro</div>
+        </section>
 
-        <section class="ui">            
+        <section class="ui">                 
             <div class="container-left">
                 <form id="credit-card">
                     <div class="number-container">
                         <label>Número do cartão</label>
-                        <input type="text" name="card-number" id="card-number" maxlength="16" placeholder="0000 0000 0000 0000"
-                        required
-                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        <input type="text" name="card-number" id="card-number" maxlength="16" placeholder="0000 0000 0000 0000" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     </div>
                     <div class="name-container">
                         <label>Nome do titular</label>
-                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="Titular"
-                        required
-                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="Titular" required onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
                     </div>
                     <div class="infos-container">
                         <div class="expiration-container">
                             <label>Validade</label>
-                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="mm/aa"
-                            required
-                            
-                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="mm/aa" required onkeypress="return event.charCode >=48 && event.charCode <= 57">
                         </div>
                         <div class="cvv-container">
                             <label>CVV</label>
-                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234"
-                            required
-                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234" required onkeypress="return event.charCode >=48 && event.charCode <= 57">
                         </div>
                     </div>
-                    <button id="button">Cadastrar</button>
+                    <button class="button-register" role="button">Cadastrar</button>
                 </form>
-            </div>      
-                        
+            </div>                    
             <div class="container-right">
                 <div class="card">
                     <div class="intern">
-                            <div class="card-number">
+                        <img class="approximation" src="/img/aprox.png" alt="aproximation">
+                        <div class="card-number">
                             <div class="number-vl">#### #### #### 0000</div>
                         </div>
                         <div class="card-holder">
@@ -66,14 +59,17 @@
                                 <label>CVV</label>
                                 <div class="cvv-vl">123</div>
                             </div>
-                        </div>
+                    </div>
+                        <img class="chip" src="/img/chip.png" alt="chip">
+                    </div>
+                </div> 
             </div>
         </section>
-    </main>
-
+        </main>
+    </section>
     <footer>
-        
+        <p>Projeto de Nala Rufino</p>
     </footer>
-    <script src="index.js" type="module"></script>
-  </body>
+    <script defer src="index.js" type="module"></script>
+</body>
 </html>

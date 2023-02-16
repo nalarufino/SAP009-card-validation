@@ -1,23 +1,30 @@
 
 const validator = {
-  isValid(creditCardNumber){
-    const arr = (creditCardNumber + '').split('').reverse().map(x => parseInt(x));
-    const lastDigit = arr.splice(0, 1)[0];
-    let sum = arr.reduce((acc, val, i) => (i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9), 0);
-    sum += lastDigit;
-    return sum % 10 === 0;
-  },
+  isValid(creditCardNumber) {
+    let sum = 0;
+    let shouldDouble = false;
+    // loop through values starting at the rightmost side
+    for (let i = creditCardNumber.length - 1; i >= 0; i--) {
+      let digit = parseInt(creditCardNumber.charAt(i));
 
-  maskify(creditCardNumber) {
-    const maskNum = [];
-    for (let i = 0; i < creditCardNumber.length; i++) {
-      if (i >= creditCardNumber.length - 4) {
-        maskNum.push(creditCardNumber[i]);
+      if (shouldDouble) {
+        if ((digit *= 2) > 9) digit -= 9;
       }
-    }
-    const masked = maskNum.join(""); //O método join() junta todos os elementos de um array (ou um array-like object) em uma string e retorna esta string
-    return masked;
-  },
-}
-export default validator;
 
+      sum += digit;
+      shouldDouble = !shouldDouble;
+    }
+    return (sum % 10) === 0;
+  },
+  maskify(creditCardNumber) {
+    let result = "";
+    for (let index = 0; index < creditCardNumber.length - 4; index++) {
+      result += "#";
+    }
+    // juntar os # com os 4 últimos caracteres da string 
+    return result + creditCardNumber.slice(-4);
+  }
+}
+
+
+export default validator;
