@@ -17,7 +17,7 @@ Neste projeto, pensei em um aplicativo da Web que permita ao usuário validar o 
 
 ## 2. Funcionamento
 
-Utilizando o algoritmo de Luhn este projeto busca validar o número 
+Utilizando o algoritmo de Luhn este projeto busca validar números de identificação, como o IMEI de telefones celulares, cartões de crédito, entre outros.
 
 Esse algoritmo funciona da seguinte maneira: Obtemos o inverso do número a ser verificado (que contém apenas dígitos [0-9]); todos os dígitos que ocupam uma posição par devem ser multiplicados por dois; se o resultado da multiplicação for maior ou igual a 10 devemos somar os dígitos deste decimal ou subtrair por 9; o número a verificar será válido se a soma de seus dígitos finais for um múltiplo de 10, onde o resto deverá ser 0.
 
@@ -41,4 +41,11 @@ isValid consiste em conferir o algoritmo de Luhn e o maskify é o algoritmo que 
 
 ## 5. Imagens
 
-°
+° Número de cartão válido
+<img class="valid" src="valid-card.gif" title="valid">
+
+° Número de cartão inválido
+<img class="invalid" src="invalid-card.gif" title="valid">
+
+° Números inválidos
+<img class="invalid-number" src="invalid-number.gif" title="invalid-number">

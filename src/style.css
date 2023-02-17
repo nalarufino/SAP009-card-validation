@@ -17,15 +17,20 @@ body {
 }
 
 h2 {
+
     margin: top 10px;
 
     color: darkblue;
 }
 
 p {
+
     color: rgb(46, 104, 156);
+
     width: fit-content;
+
     margin-bottom: auto;
+
     display: flexbox;
 }
 
@@ -64,8 +69,11 @@ p {
 }
 
 .container-center {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 }
 
@@ -88,12 +96,19 @@ p {
 }
 
 .register {
+
     position: top;
+
     color: rgb(46, 104, 156);
+
     padding: 2%;
+
     display: flex;
+
     flex-direction: column-reverse;
+
     align-items: center;
+
 }
 
 .card {
@@ -125,15 +140,20 @@ p {
 .approximation {
 
     width: 30px;
-;
 
+    color: snow;
 }
 
 .chip {
     height: 40px;
+
     position: relative;
+
     left: 87%;
+
     bottom: 20px;
+
+    color: snow;
 }
 
 .card-number {
@@ -315,9 +335,15 @@ input#cvv-text {
 }
 
 footer {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
+    margin-bottom: 2%;
+
 }
 
 @media (max-width: 1024px) {
