@@ -6,7 +6,7 @@
 * [2. Funcionamento](#2-funcionamento)
 * [3. Detalhes do projeto](#3-detalhes-do-projeto)
 * [4. Métodos](#4-métodos)
-* [5. Funcionamento](#5-funcionamento)
+* [5. Interface](#5-interface)
 
 ***
 
