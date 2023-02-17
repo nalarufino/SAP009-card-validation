@@ -11,7 +11,7 @@
 ***
 
 ## 1. Introdução ao projeto
-
+-> Link GitHub Pages: https://nalarufino.github.io/wallet-card-validation/
 Neste projeto, pensei em um aplicativo da Web que permita ao usuário validar o número de um cartão de crédito para cadastra-lo em uma carteira digital. Podendo facilitar os pagamentos por aproximação e, assim, evitando o contato direto do usuário com o cartão e maquininha.
 
 ## 2. Funcionamento
